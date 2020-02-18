@@ -165,9 +165,13 @@ html {
 
 /* SLIDER */
 
+
+/* FOOTER ARTICLE */
+
 .footer {
     max-width: 1020px;
     min-height: 500px;
+    height: 100%;
     margin: auto;
     background-color: #f2f2f2;
 }
@@ -198,3 +202,70 @@ html {
     color: #666d89;
     letter-spacing: -0.013rem;
 }
+
+
+/* FOOTER ARTICLE */
+
+
+/* FOOTER SERVICE */
+
+.footer__article-service__separator {
+    height: 36px;
+}
+
+.footer__service-service__separator {
+    height: 20px;
+}
+
+.footer__service {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.footer__service__card {
+    display: flex;
+    justify-content: start;
+    min-width: 300px;
+    max-width: 300px;
+}
+
+.footer__service__card__logo {
+    padding-top: 12px;
+    width: 60px;
+    background-repeat: no-repeat;
+}
+
+.footer__service__card__content {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.footer__service__card__content__caption {
+    padding-left: 19px;
+    font-weight: 900;
+    font-size: 18px;
+    color: #666d89;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.002em;
+}
+
+.footer__service__card__content__text {
+    padding-top: 9px;
+    padding-left: 20px;
+    overflow: hidden;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 21px;
+    font-family: Lato, sans-serif;
+    text-align: justify;
+    color: #666d89;
+    letter-spacing: -0.009rem;
+}
+
+
+/* FOOTER SERVICE */
