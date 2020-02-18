@@ -142,24 +142,24 @@ html {
     transform: rotate(180deg);
 }
 
+.slider__content {
+    display: flex;
+    width: 795px;
+}
+
 .slider__iphone-vert {
+    margin-top: 53px;
     background-image: url('assets/iphone-vertical.png');
     width: 240px;
     height: 483px;
-    margin: auto;
-    position: absolute;
-    top: 148px;
-    left: 554px;
 }
 
 .slider__iphone-horizon {
+    margin-top: 174px;
+    margin-left: 73px;
     background-image: url('assets/iphone-horizontal.png');
     width: 483px;
     height: 240px;
-    margin: auto;
-    position: absolute;
-    top: 269px;
-    left: 867px;
 }
 
 
