@@ -1,3 +1,5 @@
+/* FONTS */
+
 @font-face {
     font-family: 'Lato';
     font-style: normal;
@@ -26,13 +28,16 @@
     src: local('Lato Black'), local('Lato-Black'), url('./assets/lato-v16-latin-900.woff2') format('woff2');
 }
 
+
+/* FONTS */
+
 body,
 html {
     margin: 0 !important;
     padding: 0 !important;
 }
 
-header {
+.header {
     margin: auto;
     height: 89px;
     background-color: #272c38;
@@ -96,4 +101,60 @@ header {
     color: white;
     text-align: center;
     opacity: 0.2;
+}
+
+
+/* HEADER */
+
+.slider {
+    margin: auto;
+    width: 1020px;
+    height: 599px;
+    background-color: #ff6c64;
+}
+
+.slider__controls {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider__controls__arrow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100px;
+    height: 590px;
+}
+
+.slider__controls__arrow img {
+    opacity: 0.2;
+}
+
+.slider__controls__arrow img:hover {
+    opacity: 1;
+}
+
+.slider__controls__arrow.right {
+    transform: rotate(180deg);
+}
+
+.slider__iphone-vert {
+    background-image: url('assets/iphone-vertical.png');
+    width: 240px;
+    height: 483px;
+    margin: auto;
+    position: absolute;
+    top: 148px;
+    left: 554px;
+}
+
+.slider__iphone-horizon {
+    background-image: url('assets/iphone-horizontal.png');
+    width: 483px;
+    height: 240px;
+    margin: auto;
+    position: absolute;
+    top: 269px;
+    left: 866px;
 }
