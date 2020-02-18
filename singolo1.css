@@ -37,7 +37,7 @@ html {
     padding: 0 !important;
 }
 
-.header {
+header {
     margin: auto;
     height: 89px;
     background-color: #272c38;
@@ -111,12 +111,14 @@ html {
 
 .slider {
     margin: auto;
-    width: 1020px;
-    height: 599px;
+    width: 100%;
     background-color: #ff6c64;
 }
 
 .slider__content__wrapper {
+    margin: auto;
+    max-width: 1020px;
+    min-height: 599px;
     display: flex;
     justify-content: space-between;
 }
@@ -131,7 +133,7 @@ html {
 }
 
 .slider__controls__arrow img {
-    opacity: 0.2;
+    opacity: 0.1;
 }
 
 .slider__controls__arrow img:hover {
@@ -168,12 +170,16 @@ html {
 
 /* FOOTER ARTICLE */
 
-.footer {
+footer {
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+.footer-content-wrapper {
     max-width: 1020px;
     min-height: 500px;
     height: 100%;
     margin: auto;
-    background-color: #f2f2f2;
 }
 
 .footer__article {
@@ -193,7 +199,7 @@ html {
 
 .footer__article__content {
     font-family: 'Lato', sans-serif;
-    margin-top: 17px;
+    margin-top: 18px;
     font-style: normal;
     font-weight: 300;
     font-size: 18px;
@@ -214,7 +220,7 @@ html {
 }
 
 .footer__service-service__separator {
-    height: 20px;
+    height: 24px;
 }
 
 .footer__service {
@@ -239,7 +245,7 @@ html {
 }
 
 .footer__service__card__content {
-    padding-top: 10px;
+    padding-top: 6px;
     display: flex;
     flex-direction: column;
     justify-content: start;
