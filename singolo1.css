@@ -38,7 +38,7 @@ html {
     padding: 0 !important;
 }
 
-header {
+.header {
     margin: auto;
     height: 89px;
     background-color: #272c38;
@@ -172,7 +172,7 @@ header {
 
 /* FOOTER ARTICLE */
 
-footer {
+.footer {
     width: 100%;
     background-color: #f2f2f2;
 }
