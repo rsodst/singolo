@@ -134,7 +134,7 @@ html {
 }
 
 .slider__controls__arrow img {
-    opacity: 1;
+    opacity: 0.5;
 }
 
 .slider__controls__arrow img:hover {
