@@ -40,7 +40,7 @@ html {
 .header {
     margin: auto;
     height: 89px;
-    background-color: #272c38;
+    background-color: #2d303a;
     border-bottom: 6px solid #2c3445;
 }
 
@@ -51,7 +51,7 @@ html {
     padding-top: 13px;
     justify-content: space-between;
     align-content: center;
-    background-color: #272c38;
+    background-color: #2d303a;
 }
 
 .header__logo {
@@ -112,7 +112,7 @@ html {
 .slider {
     margin: auto;
     width: 100%;
-    background-color: #ff6c64;
+    background-color: #f06c64;
     border-bottom: 6px solid #f55d55;
 }
 
