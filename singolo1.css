@@ -113,12 +113,12 @@ html {
     margin: auto;
     width: 100%;
     background-color: #f06c64;
-    border-bottom: 6px solid #323746;
+    border-bottom: 6px solid #ea676b;
 }
 
 .slider__content__wrapper {
     margin: auto;
-    max-width: 1020px;
+    max-width: 1022px;
     min-height: 594px;
     display: flex;
     justify-content: space-between;
@@ -134,7 +134,7 @@ html {
 }
 
 .slider__controls__arrow img {
-    opacity: 0.1;
+    opacity: 1;
 }
 
 .slider__controls__arrow img:hover {
