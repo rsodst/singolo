@@ -1,4 +1,3 @@
-
 /* FONTS */
 
 @font-face {
@@ -205,10 +204,10 @@ html {
     margin-top: 18px;
     font-style: normal;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 30px;
     color: #666d89;
-    letter-spacing: 0.15px;
+    letter-spacing: 0.02em;
 }
 
 
