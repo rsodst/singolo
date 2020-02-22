@@ -36,6 +36,7 @@ html {
     margin: 0 !important;
     padding: 0 !important;
     background-color: #f2f2f2;
+    font-family: 'Lato', sans-serif;
 }
 
 .header {
@@ -56,8 +57,7 @@ html {
 }
 
 .header__logo {
-    font-family: 'Lato', sans-serif;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.005em;
     font-size: 12.2px;
     font-style: normal;
     font-weight: 300;
@@ -70,7 +70,6 @@ html {
 
 .header__logo__accent {
     color: #ff6962;
-    font-weight: lighter;
     font-size: 25px;
     font-style: normal;
     font-weight: 300;
@@ -84,21 +83,20 @@ html {
 .header__menu__item {
     cursor: pointer;
     font-weight: 500;
-    font-family: 'Lato', sans-serif;
-    font-size: 12px;
+    font-size: 12.4px;
     color: white;
+    font-stretch: expanded;
+    letter-spacing: -0.013em;
+    text-transform: uppercase;
 }
 
 .header__menu__item:hover {
-    font-family: 'Lato', sans-serif;
     font-size: 12px;
-    color: red;
+    color: #ff6962;
 }
 
 .header__menu__separator {
-    width: 29px;
-    font-family: 'Lato', sans-serif;
-    font-size: 12px;
+    width: 28px;
     color: white;
     text-align: center;
     opacity: 0.2;
@@ -192,7 +190,6 @@ html {
 }
 
 .footer__article__title {
-    font-family: 'Lato', sans-serif;
     font-size: 30px;
     font-style: normal;
     font-weight: 900;
@@ -201,7 +198,6 @@ html {
 }
 
 .footer__article__content {
-    font-family: 'Lato', sans-serif;
     margin-top: 18px;
     font-style: normal;
     font-weight: 300;
