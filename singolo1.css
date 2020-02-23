@@ -212,6 +212,8 @@ html {
 .footer__article__content {
     margin-top: 18px;
     font-style: normal;
+    max-height: 60px;
+    min-height: 60px;
     font-weight: 300;
     font-size: 18px;
     line-height: 30px;
