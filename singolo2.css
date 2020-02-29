@@ -100,7 +100,6 @@ html {
 
 .about__content h1 {
     height: 30px;
-    font-size: 30px;
     font-weight: 900;
     color: #666d89;
     letter-spacing: -0.2px;
@@ -207,7 +206,7 @@ html {
     background-position: center;
 }
 
-.about__bottom_line-about {
+.bottom_line-about {
     max-height: 6px;
     min-height: 6px;
     width: 100%;
@@ -216,11 +215,20 @@ html {
     background-color: #ffffff;
 }
 
-.about__bottom_line-portfolio {
+.bottom_line-portfolio {
     max-height: 6px;
     min-height: 6px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     background-color: #323746;
+}
+
+.bottom_line-footer {
+    max-height: 6px;
+    min-height: 6px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ea676b;
 }
