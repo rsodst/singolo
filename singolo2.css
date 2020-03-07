@@ -2,14 +2,14 @@ body,
 html {
     margin: 0 !important;
     padding: 0 !important;
-    font-family: Lato, sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .portfolio {
     background-color: #2d303a;
     color: #2d303a;
     min-width: 1020px;
-    padding-top: 40px;
+    padding-top: 39px;
 }
 
 .portfolio__content {
@@ -34,28 +34,26 @@ html {
     color: #767e9e;
     font-weight: 100;
     height: 18px;
+    text-align: justify;
 }
 
 .portfolio__content__tags {
     display: flex;
     justify-content: start;
-    padding-top: 0.5px;
+    padding-top: 1px;
+    margin-left: 1px;
 }
 
 .portfolio__content__tags__tag {
-    line-height: 20px;
-    letter-spacing: -0.3px;
-    word-spacing: 1px;
-    box-sizing: border-box;
     font-size: 12px;
     line-height: 20px;
-    letter-spacing: -0.3px;
+    letter-spacing: -0.2px;
     word-spacing: 1px;
     padding: 0 7px;
     margin-right: 10px;
     box-sizing: border-box;
     color: #767e9e;
-    border: 1px solid #666d89;
+    border: 0.7px solid #666d89;
     border-radius: 5px;
     text-decoration: none;
 }
@@ -151,11 +149,12 @@ html {
     line-height: 21.56px;
     text-align: justify;
     color: #666d89;
+    height: 24px;
 }
 
 .about__content__details__detail__buttons {
     padding-left: 1px;
-    padding-top: 23.5px;
+    padding-top: 42px;
     min-width: 150px;
     max-width: 150px;
     display: flex;
