@@ -215,15 +215,16 @@
             <h1>Get a Quote</h1>
             <h3>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</h3>
             <div class="form__content-wrapper">
-                <form method="GET">
-                    <div class="form__content__inputs">
-                        <input type="text" placeholder="Name (Required)">
-                        <input type="email" placeholder="Email (Required)">
-                        <input type="text" placeholder="Subject">
-                        <textarea type="text" placeholder="Describe your project in detail..."></textarea>
+                <form method="POST">
+                    <input type="text" name="name" placeholder="Name (Required)" required>
+                    <input type="email" name="email" placeholder="Email (Required)" required>
+                    <input type="text" name="subject" placeholder="Subject">
+                    <textarea type="text" placeholder="Describe your project in detail..."></textarea>
+                    <div class="buttons">
                         <button type="submit" formmethod="POST">Submit</button>
                     </div>
                 </form>
+
                 <div class="form__content__contacts">
                     <div class="form__content__contacts__caption">Contact Information</div>
                     <div class="form__content__contacts__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viver­ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</div>

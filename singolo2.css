@@ -106,7 +106,7 @@ html {
 }
 
 .about__content h3 {
-    padding-top: 4px;
+    padding-top: 5px;
     font-size: 18px;
     color: #767e9e;
     font-weight: 100;
@@ -116,7 +116,7 @@ html {
 }
 
 .about__content__details {
-    padding-top: 69px;
+    padding-top: 68px;
     display: flex;
     justify-content: space-between;
 }
