@@ -12,6 +12,7 @@
     <title>Singolo</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="notifications.toast.css">
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="singolo1.css">
     <link rel="stylesheet" href="singolo2.css">
@@ -23,6 +24,10 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <!-- singolo 1 -->
+    <notification-toast-area id="toast-area">
+    </notification-toast-area>
+
+    <div id="HOME"></div>
     <div class="header">
         <div class="header__wrapper">
             <div class="header__logo">
@@ -30,10 +35,10 @@
                     <H1>SINGOLO<span class="header__logo__accent">*</span></H1>
                 </a>
             </div>
-            <div class="header__menu">
+            <div class="header__menu" id="pageNavigator">
                 <div class="header__menu__item">home</div>
                 <div class="header__menu__separator">·</div>
-                <div class="header__menu__item ">services</div>
+                <div class="header__menu__item">services</div>
                 <div class="header__menu__separator">·</div>
                 <div class="header__menu__item">portfolio</div>
                 <div class="header__menu__separator">·</div>
@@ -44,15 +49,29 @@
         </div>
     </div>
 
+    <div class="header__slider__separator"></div>
+
     <div class="slider">
-        <div class="slider__content__wrapper">
+        <div class="slider__content__wrapper" id="slider">
             <div class="slider__controls__arrow left">
                 <img src="assets/icons/arrow.svg" width="100" height="27" />
             </div>
 
             <div class="slider__content">
-                <div class="slider__iphone-vert"></div>
-                <div class="slider__iphone-horizon"></div>
+                <div class="slider__iphone-vert" id="iphone-vert"></div>
+                <div class="slider__iphone-horizon" id="iphone_horizon"></div>
+            </div>
+
+            <div class="slider__content">
+                <img src="assets/img/2.jpg" width="800">
+            </div>
+
+            <div class="slider__content">
+                <img src="assets/img/3.jpg" width="800">
+            </div>
+
+            <div class="slider__content">
+                <img src="assets/img/4.jpg" width="800">
             </div>
 
             <div class="slider__controls__arrow right">
@@ -61,6 +80,7 @@
         </div>
     </div>
 
+    <div id="SERVICES"></div>
     <div class="ourservice">
         <div class="ourservice-content-wrapper">
             <div class="ourservice__article">
@@ -133,17 +153,19 @@
     <!-- singolo 1 -->
 
     <!-- singolo 2 -->
+    <div id="PORTFOLIO"></div>
     <div class="portfolio">
         <div class="portfolio__content">
             <h1>Portfolio</h1>
             <h3>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</h3>
-            <div class="portfolio__content__tags">
+            <div class="portfolio__content__tags" id="portfolio_tags">
                 <div class="portfolio__content__tags__tag">All</div>
                 <div class="portfolio__content__tags__tag">Web Design</div>
                 <div class="portfolio__content__tags__tag">Graphic Design</div>
                 <div class="portfolio__content__tags__tag">Artwork</div>
             </div>
-            <div class="portfolio__content__images">
+            <div class="portfolio__content__images" id="portfolio_images">
+
                 <img src="assets/img/portfolio-1.jpg">
                 <img src="assets/img/portfolio-2.jpg">
                 <img src="assets/img/portfolio-3.jpg">
@@ -163,6 +185,7 @@
         <div class="bottom_line-portfolio"></div>
     </div>
 
+    <div id="ABOUT"></div>
     <div class="about">
         <div class="about__content">
             <h1>About Us</h1>
@@ -210,16 +233,17 @@
     <!-- singolo 2 -->
 
     <!-- singolo 3 -->
+    <div id="CONTACT"></div>
     <div class="form">
         <div class="form__content">
             <h1>Get a Quote</h1>
             <h3>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</h3>
             <div class="form__content-wrapper">
-                <form method="POST">
-                    <input type="text" name="name" placeholder="Name (Required)" required>
-                    <input type="email" name="email" placeholder="Email (Required)" required>
-                    <input type="text" name="subject" placeholder="Subject">
-                    <textarea type="text" placeholder="Describe your project in detail..."></textarea>
+                <form method="POST" id="form">
+                    <input id="name" type="text" name="name" placeholder="Name (Required)" required>
+                    <input id="email" type="email" name="email" placeholder="Email (Required)" required>
+                    <input id="subject" type="text" name="subject" placeholder="Subject">
+                    <textarea id="describe" type="text" placeholder="Describe your project in detail..."></textarea>
                     <div class="buttons">
                         <button type="submit" formmethod="POST">Submit</button>
                     </div>
@@ -255,7 +279,8 @@
         </div>
     </footer>
     <!-- singolo 3 -->
-    <script src="" async defer></script>
+    <script src="notifications.toast.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

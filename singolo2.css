@@ -64,17 +64,35 @@ html {
     border: 1px solid white;
 }
 
+.portfolio__content__tags__tag.selected {
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+}
+
 .portfolio__content__images {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 19px 0 42px;
+    margin-top: 14px;
+    margin-left: -5px;
+    margin-right: -5px;
     overflow: hidden;
     max-height: 621px;
 }
 
+.portfolio__content__images img:hover {
+    border: 5px solid #F06C64;
+    transition: all 0.5s ease;
+}
+
+.portfolio__content__images img.selected {
+    border: 5px solid #F06C64;
+}
+
 .portfolio__content__images img {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    border: 5px solid transparent;
 }
 
 
