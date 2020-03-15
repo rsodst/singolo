@@ -162,6 +162,8 @@ class Portfolio {
     constructor() {
         this._portfolioTags = [...document.getElementById('portfolio_tags').childNodes];
 
+        this._portfolioTags[1].classList.add('selected');
+
         this._portfolioTags.forEach((element, i) => {
             element.onclick = () => {
                 element.classList.add("selected");
@@ -251,12 +253,18 @@ class FormInterceptor {
 
             if (subject.value == 'Singolo') {
                 message = 'Тема: Singolo';
+            } else if (subject.value.length > 0) {
+                message = `\nТема: ${subject.value}`;
             }
 
             let describe = document.getElementById('describe');
 
             if (describe.value == 'Portfolio project') {
                 message += '\nОписание: Singolo';
+            } else if (describe.value.length > 0) {
+                message += `\nОписание: ${describe.value}`;
+            } else {
+                message += '\nБез описания';
             }
 
             toastNotification.push('Письмо отправлено', message, () => {
