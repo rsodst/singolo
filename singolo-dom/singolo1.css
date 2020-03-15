@@ -140,7 +140,7 @@ html {
     position: absolute;
     display: flex;
     max-width: 800px;
-    max-height: 590px;
+    max-height: 595px;
     overflow: hidden;
     box-sizing: border-box;
 }
@@ -177,23 +177,225 @@ html {
     }
 }
 
+
+/* first slider phone left */
+
 .slider__iphone-vert {
     margin-left: 2px;
     margin-top: 53px;
-    background-image: url('assets/img/iphone-vertical.png');
+    background-image: url('assets/img/phone-slide-1/phone-vertical.svg');
+    background-repeat: no-repeat;
+    width: 242px;
+    height: 483px;
+    z-index: 5;
+}
+
+.slider__iphone-vert__display {
+    z-index: 6;
+    position: absolute;
+    margin-left: 16px;
+    margin-top: 118px;
+    background-image: url('assets/img/phone-slide-1/phone-vertical-display.png');
     background-repeat: no-repeat;
     width: 242px;
     height: 483px;
 }
 
+.slider__iphone-vert__display.disabled {
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.slider__iphone-vert__shadow {
+    z-index: 4;
+    position: absolute;
+    margin-left: 2px;
+    margin-top: 53px;
+    background-image: url('assets/img/phone-slide-1/phone-vertical-shadow.png');
+    background-repeat: no-repeat;
+    width: 242px;
+    height: 483px;
+}
+
+
+/* first slider phone left */
+
+
+/* first slider phone right */
+
 .slider__iphone-horizon {
     margin-top: 174px;
     margin-left: 73px;
-    background-image: url('assets/img/iphone-horizontal.png');
+    background-image: url('assets/img/phone-slide-1/phone-horizontal.svg');
+    background-repeat: no-repeat;
+    width: 489px;
+    height: 240px;
+    z-index: 5;
+}
+
+.slider__iphone-horizon__shadow {
+    z-index: 4;
+    position: absolute;
+    margin-top: 174px;
+    margin-left: 316px;
+    background-image: url('assets/img/phone-slide-1/phone-horizontal-shadow.png');
     background-repeat: no-repeat;
     width: 489px;
     height: 240px;
 }
+
+.slider__iphone-horizon__display {
+    position: absolute;
+    z-index: 6;
+    margin-top: 188px;
+    margin-left: 375px;
+    background-image: url('assets/img/phone-slide-1/phone-horizontal-display.png');
+    background-repeat: no-repeat;
+    width: 489px;
+    height: 240px;
+}
+
+.slider__iphone-horizon__display.disabled {
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+
+/* second slider phone left */
+
+.slider2__iphone1-vert {
+    opacity: 0.6;
+    position: absolute;
+    margin-left: 142px;
+    margin-top: 153px;
+    background-image: url('assets/img/phone-slide-2/phone-vertical-1.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 298px;
+    z-index: 3;
+}
+
+.slider2__iphone1-vert__shadow {
+    margin-left: 142px;
+    margin-top: 153px;
+    background-image: url('assets/img/phone-slide-2/phone-vertical-shadow-1.png');
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 350px;
+    position: absolute;
+    z-index: 2;
+}
+
+.slider2__iphone1-vert__display {
+    opacity: 0.7;
+    margin-left: 151.7px;
+    margin-top: 195px;
+    background-image: url('assets/img/phone-slide-2/phone-vertical-display-1.png');
+    background-repeat: no-repeat;
+    width: 122px;
+    height: 298px;
+    position: absolute;
+    z-index: 6;
+}
+
+.slider2__iphone1-vert__display.disabled {
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+
+/* second slider phone left */
+
+
+/* second slider phone right */
+
+.slider2__iphone2-vert {
+    opacity: 0.7;
+    position: absolute;
+    margin-left: 502px;
+    margin-top: 153px;
+    background-image: url('assets/img/phone-slide-2/phone-vertical-2.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 298px;
+    z-index: 3;
+}
+
+.slider2__iphone2-vert__shadow {
+    margin-left: 502px;
+    margin-top: 153px;
+    background-image: url('assets/img/phone-slide-2/phone-vertical-shadow-2.png');
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 350px;
+    position: absolute;
+    z-index: 2;
+}
+
+.slider2__iphone2-vert__display {
+    opacity: 0.7;
+    margin-left: 511px;
+    margin-top: 195px;
+    background-image: url('assets/img/phone-slide-2/phone-vertical-display-2.png');
+    background-repeat: no-repeat;
+    width: 122px;
+    height: 298px;
+    position: absolute;
+    z-index: 5;
+}
+
+.slider2__iphone2-vert__display.disabled {
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+
+/* second slider phone right */
+
+
+/* second slider phone center */
+
+.slider2__iphone-vert {
+    margin-left: 273px;
+    margin-top: 44px;
+    background-image: url('assets/img/phone-slide-2/phone-vertical.svg');
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 600px;
+    z-index: 5;
+}
+
+.slider2__iphone-vert__shadow {
+    margin-left: 273px;
+    margin-top: 44px;
+    background-image: url('assets/img/phone-slide-2/phone-vertical-shadow.png');
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 600px;
+    position: absolute;
+    z-index: 4;
+}
+
+.slider2__iphone-vert__display {
+    margin-left: 287px;
+    margin-top: 113px;
+    background-image: url('assets/img/phone-slide-2/phone-vertical-display.png');
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 600px;
+    position: absolute;
+    z-index: 6;
+}
+
+.slider2__iphone-vert__display.disabled {
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+
+/* second slider phone center */
 
 
 /* SLIDER */
