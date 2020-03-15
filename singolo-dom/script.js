@@ -135,26 +135,41 @@ class PhoneDisplay {
         this.horizonPhone.enabled = true;
 
         this.verticalPhone.onclick = () => {
-            if (this.verticalPhone.enabled) {
-                this.verticalPhone.enabled = false;
-                this.verticalPhone.style.backgroundImage = 'url("assets/img/iphone-vertical-disabled.png")';
-
-            } else {
-                this.verticalPhone.enabled = true;
-                this.verticalPhone.style.backgroundImage = 'url("assets/img/iphone-vertical.png")';
-            }
+            this._switchVerticalPhone();
         };
 
         this.horizonPhone.onclick = () => {
-            if (this.horizonPhone.enabled) {
-                this.horizonPhone.enabled = false;
-                this.horizonPhone.style.backgroundImage = 'url("assets/img/iphone-horizontal-disabled.png")';
-
-            } else {
-                this.horizonPhone.enabled = true;
-                this.horizonPhone.style.backgroundImage = 'url("assets/img/iphone-horizontal.png")';
-            }
+            this._switchHorizonPhone();
         };
+
+        // preload images
+        this._switchVerticalPhone();
+        this._switchVerticalPhone();
+
+        // preload images
+        this._switchHorizonPhone();
+        this._switchHorizonPhone();
+    }
+
+    _switchHorizonPhone() {
+        if (this.horizonPhone.enabled) {
+            this.horizonPhone.enabled = false;
+            this.horizonPhone.style.backgroundImage = 'url("assets/img/iphone-horizontal-disabled.png")';
+
+        } else {
+            this.horizonPhone.enabled = true;
+            this.horizonPhone.style.backgroundImage = 'url("assets/img/iphone-horizontal.png")';
+        }
+    }
+
+    _switchVerticalPhone() {
+        if (this.verticalPhone.enabled) {
+            this.verticalPhone.enabled = false;
+            this.verticalPhone.style.backgroundImage = 'url("assets/img/iphone-vertical-disabled.png")';
+        } else {
+            this.verticalPhone.enabled = true;
+            this.verticalPhone.style.backgroundImage = 'url("assets/img/iphone-vertical.png")';
+        }
     }
 }
 
