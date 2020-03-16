@@ -1,315 +1,58 @@
-class PageNavigator {
-    constructor() {
-        this._initialize();
-
-        let pageNavigator = document.getElementById('pageNavigator');
-
-        let menuItems = Array.from(pageNavigator.childNodes)
-            .filter(p => p.className == 'header__menu__item');
-
-        menuItems[0].classList.add('selected');
-
-        menuItems.forEach(element => {
-
-            element.onclick = () => {
-
-                let section = this._sections.find(p => {
-                    if (p.id == element.innerText) {
-                        menuItems.forEach(p => {
-                            if (p.innerText != element.innerText) {
-                                p.classList.remove('selected');
-                            }
-                        });
-
-                        element.classList.add('selected');
-                        return p;
-                    }
-                });
-
-                window.scroll({
-                    top: section.offsetTop - pageNavigator.clientHeight,
-                    behavior: 'smooth'
-                });
-
-            };
-
-        });
-
-        window.onscroll = () => {
-            menuItems.forEach(item => {
-
-                let section = this._sections.find(p => {
-                    if (p.id == item.innerText) {
-                        return p;
-                    }
-                });
-
-                let offsetTop = Math.floor(section.getBoundingClientRect().y);
-
-                if ((offsetTop > 63 && offsetTop < 220) || offsetTop == 0) {
-
-                    item.classList.add('selected');
-
-                    menuItems.forEach(p => {
-                        if (p.innerText != item.innerText) {
-                            p.classList.remove('selected');
-                        }
-                    });
-                }
-            });
-        };
-
-    }
-    _initialize() {
-        this._sections = [
-            document.getElementById('HOME'),
-            document.getElementById('SERVICES'),
-            document.getElementById('PORTFOLIO'),
-            document.getElementById('ABOUT'),
-            document.getElementById('CONTACT'),
-        ];
-    }
-}
-
-class Slider {
-    constructor() {
-        let slider = document.getElementById('slider');
-
-        [...slider.childNodes]
-        .find(p => {
-            if (p.className == 'slider__controls__arrow left') return p;
-        }).onclick = () => {
-            this._showPrevElement();
-        };
-
-        [...slider.childNodes]
-        .find(p => {
-            if (p.className == 'slider__controls__arrow right') return p;
-        }).onclick = () => {
-            this._showNextElement();
-        };
-
-        this.items = [...slider.childNodes].filter(p => {
-            if (p.className == 'slider__content') {
-                return p;
-            }
-        });
-
-        this.items.slice(1).forEach(element => {
-            element.style.visibility = 'hidden';
-        });
-
-        this.current = 0;
-    }
-
-    _showNextElement() {
-        this._hideForward(this.items[Math.abs(this.current)]);
-        this.current = (this.current + 1) % this.items.length;
-        this._showForward(this.items[Math.abs(this.current)]);
-    }
-
-    _showPrevElement() {
-
-        this._hideBackward(this.items[Math.abs(this.current)]);
-        this.current = (this.current - 1) % this.items.length;
-        this._showBackward(this.items[Math.abs(this.current)]);
-    }
-
-    _hideForward(element) {
-        element.classList.remove('visible-forward');
-        element.classList.remove('visible-backward');
-        element.classList.add('hidden-forward');
-    }
-
-    _showForward(element) {
-        element.style.visibility = 'visible';
-        element.classList.remove('hidden-forward');
-        element.classList.remove('hidden-backward');
-        element.classList.add('visible-forward');
-    }
-
-    _hideBackward(element) {
-        element.classList.remove('visible-backward');
-        element.classList.remove('visible-forward');
-        element.classList.add('hidden-backward');
-    }
-
-    _showBackward(element) {
-        element.style.visibility = 'visible';
-        element.classList.remove('hidden-backward');
-        element.classList.remove('hidden-forward');
-        element.classList.add('visible-backward');
-    }
-
-}
-
-class PhoneDisplay {
-    constructor() {
-        let phoneIds = [
-            'iphone-vert-display',
-            'iphone-horizon-display',
-            'iphone1-display',
-            'iphone-center-display',
-            'iphone2-display',
-        ];
-
-        phoneIds.forEach(p => {
-            let phoneElement = document.getElementById(p);
-
-            phoneElement.onclick = () => {
-                this._switchDisplay(phoneElement);
-            };
-
-            phoneElement.onclick = () => {
-                this._switchDisplay(phoneElement);
-            };
-        });
-    }
-
-    _switchDisplay(display) {
-
-        if (display.enabled == undefined) {
-            display.enabled = true;
-        }
-
-        if (display.enabled) {
-            display.enabled = false;
-            display.classList.add('disabled');
-        } else {
-            display.enabled = true;
-            display.classList.remove('disabled');
-        }
-    }
-}
-
-class Portfolio {
-    constructor() {
-        this._portfolioTags = [...document.getElementById('portfolio_tags').childNodes];
-
-        this._portfolioTags[1].classList.add('selected');
-
-        this._portfolioTags.forEach((element, i) => {
-            element.onclick = () => {
-                element.classList.add("selected");
-                this._shuffle(i);
-                this._portfolioTags.forEach(p => {
-                    if (p.innerText != element.innerText && p.classList) {
-                        p.classList.remove('selected');
-                    }
-                });
-            };
-        });
-
-        let portfolioImages = [...document.getElementById('portfolio_images').childNodes].filter(p => p.tagName == 'IMG');
-
-        portfolioImages.forEach((element, j) => {
-            element.onclick = () => {
-                element.classList.add("selected");
-                portfolioImages.forEach((p, i) => {
-                    if (i != j && p.classList) {
-                        p.classList.remove('selected');
-                    }
-                });
-            };
-        });
-
-    }
-
-    _shuffle(shift) {
-        let length = 12;
-
-        let portfolioImages = [...document.getElementById('portfolio_images').childNodes];
-
-        portfolioImages.filter(p => p.tagName == 'IMG')
-            .forEach((p, i) => {
-                let srcId = (i + shift) % length;
-                srcId = srcId == 0 ? length : srcId;
-                p.src = `assets/img/portfolio-${srcId}.jpg`;
-            });
-
-    }
-}
-
+const _0x5226 = ['portfolio_images', 'find', 'slider__controls__arrow\x20right', '_sections', 'getElementById', 'attachEvent', '_switchDisplay', 'button', 'add', 'pageNavigator', '.jpg', 'SERVICES', '\x0aТема:\x20', 'tagName', 'childNodes', 'length', 'iphone-horizon-display', 'Singolo', 'CONTACT', 'value', 'classList', 'header__menu__item', 'slice', 'slider__controls__arrow\x20left', 'hidden', 'assets/img/portfolio-', '_showBackward', 'style', 'getElementsByTagName', 'src', 'abs', 'innerText', '\x0aОписание:\x20Singolo', 'selected', 'enableform', 'push', 'items', 'slider', 'scroll', '_showNextElement', 'visible-backward', 'form', 'hidden-backward', 'enabled', 'textarea', '_initialize', 'visibility', 'onscroll', 'disabled', 'filter', 'from', '_portfolioTags', 'onclick', '_hideBackward', '_showPrevElement', 'smooth', 'remove', 'IMG', 'Тема:\x20Singolo', 'hidden-forward', '_showForward', 'current', 'subject', 'preventDefault', '\x0aБез\x20описания', 'submit', 'portfolio_tags', 'disableform', 'iphone-vert-display', 'describe', 'visible-forward', 'HOME', '_shuffle', 'iphone-center-display', 'iphone1-display', 'floor', 'forEach', 'input', 'iphone2-display', 'className', '_hideForward', 'Portfolio\x20project', '\x0aОписание:\x20', 'slider__content', 'Без\x20темы', 'toast-area', 'visible', 'offsetTop', 'getBoundingClientRect', 'Письмо\x20отправлено', 'ABOUT'];
+(function(_0x301972, _0x522684) { const _0x10b23d = function(_0x5b1786) { while (--_0x5b1786) { _0x301972['push'](_0x301972['shift']()); } };
+    _0x10b23d(++_0x522684); }(_0x5226, 0x12e));
+const _0x10b2 = function(_0x301972, _0x522684) { _0x301972 = _0x301972 - 0x0; let _0x10b23d = _0x5226[_0x301972]; return _0x10b23d; };
+class PageNavigator { constructor() { this['_initialize'](); let _0x572af8 = document[_0x10b2('0x42')](_0x10b2('0x47')); let _0x6da593 = Array[_0x10b2('0x15')](_0x572af8[_0x10b2('0x4c')])[_0x10b2('0x14')](_0x538117 => _0x538117[_0x10b2('0x32')] == _0x10b2('0x53'));
+        _0x6da593[0x0][_0x10b2('0x52')][_0x10b2('0x46')](_0x10b2('0x4'));
+        _0x6da593[_0x10b2('0x2f')](_0x4f9ff5 => { _0x4f9ff5[_0x10b2('0x17')] = () => { let _0x40685f = this[_0x10b2('0x41')][_0x10b2('0x3f')](_0x46f94a => { if (_0x46f94a['id'] == _0x4f9ff5[_0x10b2('0x2')]) { _0x6da593['forEach'](_0x4dbae2 => { if (_0x4dbae2[_0x10b2('0x2')] != _0x4f9ff5[_0x10b2('0x2')]) { _0x4dbae2[_0x10b2('0x52')][_0x10b2('0x1b')]('selected'); } });
+                        _0x4f9ff5[_0x10b2('0x52')][_0x10b2('0x46')](_0x10b2('0x4')); return _0x46f94a; } });
+                window[_0x10b2('0x9')]({ 'top': _0x40685f[_0x10b2('0x3a')] - _0x572af8['clientHeight'], 'behavior': _0x10b2('0x1a') }); }; });
+        window[_0x10b2('0x12')] = () => { _0x6da593[_0x10b2('0x2f')](_0xc59a61 => { let _0x3ef60e = this[_0x10b2('0x41')][_0x10b2('0x3f')](_0x546c3b => { if (_0x546c3b['id'] == _0xc59a61['innerText']) { return _0x546c3b; } }); let _0x1b6d25 = Math[_0x10b2('0x2e')](_0x3ef60e[_0x10b2('0x3b')]()['y']); if (_0x1b6d25 > 0x3f && _0x1b6d25 < 0xdc || _0x1b6d25 == 0x0) { _0xc59a61[_0x10b2('0x52')][_0x10b2('0x46')](_0x10b2('0x4'));
+                    _0x6da593[_0x10b2('0x2f')](_0x42d2a1 => { if (_0x42d2a1['innerText'] != _0xc59a61[_0x10b2('0x2')]) { _0x42d2a1['classList'][_0x10b2('0x1b')](_0x10b2('0x4')); } }); } }); }; }[_0x10b2('0x10')]() { this[_0x10b2('0x41')] = [document[_0x10b2('0x42')](_0x10b2('0x2a')), document[_0x10b2('0x42')](_0x10b2('0x49')), document[_0x10b2('0x42')]('PORTFOLIO'), document[_0x10b2('0x42')](_0x10b2('0x3d')), document['getElementById'](_0x10b2('0x50'))]; } }
+class Slider { constructor() { let _0x2fa70f = document['getElementById'](_0x10b2('0x8'));
+        [..._0x2fa70f[_0x10b2('0x4c')]][_0x10b2('0x3f')](_0x3bbe58 => { if (_0x3bbe58[_0x10b2('0x32')] == _0x10b2('0x55')) return _0x3bbe58; })['onclick'] = () => { this['_showPrevElement'](); };
+        [..._0x2fa70f[_0x10b2('0x4c')]][_0x10b2('0x3f')](_0x1bdd7d => { if (_0x1bdd7d[_0x10b2('0x32')] == _0x10b2('0x40')) return _0x1bdd7d; })[_0x10b2('0x17')] = () => { this[_0x10b2('0xa')](); };
+        this[_0x10b2('0x7')] = [..._0x2fa70f[_0x10b2('0x4c')]][_0x10b2('0x14')](_0x4d1ad2 => { if (_0x4d1ad2[_0x10b2('0x32')] == _0x10b2('0x36')) { return _0x4d1ad2; } });
+        this[_0x10b2('0x7')][_0x10b2('0x54')](0x1)[_0x10b2('0x2f')](_0x4bc671 => { _0x4bc671[_0x10b2('0x59')][_0x10b2('0x11')] = _0x10b2('0x56'); });
+        this[_0x10b2('0x20')] = 0x0; }['_showNextElement']() { this[_0x10b2('0x33')](this[_0x10b2('0x7')][Math[_0x10b2('0x1')](this[_0x10b2('0x20')])]);
+        this[_0x10b2('0x20')] = (this[_0x10b2('0x20')] + 0x1) % this[_0x10b2('0x7')]['length'];
+        this[_0x10b2('0x1f')](this[_0x10b2('0x7')][Math[_0x10b2('0x1')](this[_0x10b2('0x20')])]); }[_0x10b2('0x19')]() { this[_0x10b2('0x18')](this[_0x10b2('0x7')][Math[_0x10b2('0x1')](this[_0x10b2('0x20')])]);
+        this['current'] = (this['current'] - 0x1) % this['items'][_0x10b2('0x4d')];
+        this[_0x10b2('0x58')](this[_0x10b2('0x7')][Math[_0x10b2('0x1')](this[_0x10b2('0x20')])]); }[_0x10b2('0x33')](_0x2b8a9a) { _0x2b8a9a[_0x10b2('0x52')][_0x10b2('0x1b')]('visible-forward');
+        _0x2b8a9a[_0x10b2('0x52')][_0x10b2('0x1b')]('visible-backward');
+        _0x2b8a9a[_0x10b2('0x52')][_0x10b2('0x46')](_0x10b2('0x1e')); }[_0x10b2('0x1f')](_0x124d6b) { _0x124d6b[_0x10b2('0x59')][_0x10b2('0x11')] = _0x10b2('0x39');
+        _0x124d6b[_0x10b2('0x52')][_0x10b2('0x1b')](_0x10b2('0x1e'));
+        _0x124d6b[_0x10b2('0x52')][_0x10b2('0x1b')](_0x10b2('0xd'));
+        _0x124d6b[_0x10b2('0x52')][_0x10b2('0x46')](_0x10b2('0x29')); }['_hideBackward'](_0xc59db4) { _0xc59db4[_0x10b2('0x52')][_0x10b2('0x1b')](_0x10b2('0xb'));
+        _0xc59db4[_0x10b2('0x52')]['remove'](_0x10b2('0x29'));
+        _0xc59db4[_0x10b2('0x52')]['add'](_0x10b2('0xd')); }[_0x10b2('0x58')](_0x2c1e92) { _0x2c1e92[_0x10b2('0x59')][_0x10b2('0x11')] = _0x10b2('0x39');
+        _0x2c1e92['classList'][_0x10b2('0x1b')](_0x10b2('0xd'));
+        _0x2c1e92[_0x10b2('0x52')]['remove'](_0x10b2('0x1e'));
+        _0x2c1e92[_0x10b2('0x52')][_0x10b2('0x46')](_0x10b2('0xb')); } }
+class PhoneDisplay { constructor() { let _0x3241a1 = [_0x10b2('0x27'), _0x10b2('0x4e'), _0x10b2('0x2d'), _0x10b2('0x2c'), _0x10b2('0x31')];
+        _0x3241a1[_0x10b2('0x2f')](_0x52ddcc => { let _0x354ea7 = document[_0x10b2('0x42')](_0x52ddcc);
+            _0x354ea7[_0x10b2('0x17')] = () => { this[_0x10b2('0x44')](_0x354ea7); };
+            _0x354ea7[_0x10b2('0x17')] = () => { this[_0x10b2('0x44')](_0x354ea7); }; }); }[_0x10b2('0x44')](_0x5ed9a9) { if (_0x5ed9a9[_0x10b2('0xe')] == undefined) { _0x5ed9a9[_0x10b2('0xe')] = !![]; } if (_0x5ed9a9[_0x10b2('0xe')]) { _0x5ed9a9[_0x10b2('0xe')] = ![];
+            _0x5ed9a9[_0x10b2('0x52')][_0x10b2('0x46')](_0x10b2('0x13')); } else { _0x5ed9a9[_0x10b2('0xe')] = !![];
+            _0x5ed9a9[_0x10b2('0x52')][_0x10b2('0x1b')](_0x10b2('0x13')); } } }
+class Portfolio { constructor() { this[_0x10b2('0x16')] = [...document[_0x10b2('0x42')](_0x10b2('0x25'))['childNodes']];
+        this[_0x10b2('0x16')][0x1][_0x10b2('0x52')][_0x10b2('0x46')](_0x10b2('0x4'));
+        this[_0x10b2('0x16')][_0x10b2('0x2f')]((_0x525f06, _0x33d9e3) => { _0x525f06[_0x10b2('0x17')] = () => { _0x525f06[_0x10b2('0x52')][_0x10b2('0x46')](_0x10b2('0x4'));
+                this[_0x10b2('0x2b')](_0x33d9e3);
+                this[_0x10b2('0x16')]['forEach'](_0x34e40c => { if (_0x34e40c['innerText'] != _0x525f06[_0x10b2('0x2')] && _0x34e40c[_0x10b2('0x52')]) { _0x34e40c[_0x10b2('0x52')][_0x10b2('0x1b')](_0x10b2('0x4')); } }); }; }); let _0x5f1be1 = [...document[_0x10b2('0x42')](_0x10b2('0x3e'))[_0x10b2('0x4c')]]['filter'](_0xa2a7ae => _0xa2a7ae[_0x10b2('0x4b')] == _0x10b2('0x1c'));
+        _0x5f1be1[_0x10b2('0x2f')]((_0x5de5de, _0x2fe0b8) => { _0x5de5de[_0x10b2('0x17')] = () => { _0x5de5de['classList'][_0x10b2('0x46')](_0x10b2('0x4'));
+                _0x5f1be1['forEach']((_0x5b68b1, _0xa151b6) => { if (_0xa151b6 != _0x2fe0b8 && _0x5b68b1[_0x10b2('0x52')]) { _0x5b68b1['classList'][_0x10b2('0x1b')](_0x10b2('0x4')); } }); }; }); }[_0x10b2('0x2b')](_0x1aa1bd) { let _0x381d9e = 0xc; let _0x4daea1 = [...document[_0x10b2('0x42')](_0x10b2('0x3e'))[_0x10b2('0x4c')]];
+        _0x4daea1[_0x10b2('0x14')](_0x460043 => _0x460043[_0x10b2('0x4b')] == _0x10b2('0x1c'))['forEach']((_0x467857, _0x522042) => { let _0xc2b98f = (_0x522042 + _0x1aa1bd) % _0x381d9e;
+            _0xc2b98f = _0xc2b98f == 0x0 ? _0x381d9e : _0xc2b98f;
+            _0x467857[_0x10b2('0x0')] = _0x10b2('0x57') + _0xc2b98f + _0x10b2('0x48'); }); } }
 class FormInterceptor {
-
-    disableform(form) {
-        var f = form.getElementsByTagName('input');
-        for (var i = 0; i < f.length; i++)
-            f[i].disabled = true;
-
-        var f = form.getElementsByTagName('button');
-        for (var i = 0; i < f.length; i++)
-            f[i].disabled = true;
-
-        var f = form.getElementsByTagName('textarea');
-        for (var i = 0; i < f.length; i++)
-            f[i].disabled = true;
-    }
-
-    enableform(form) {
-        var f = form.getElementsByTagName('input');
-        for (var i = 0; i < f.length; i++)
-            f[i].disabled = false;
-
-        var f = form.getElementsByTagName('button');
-        for (var i = 0; i < f.length; i++)
-            f[i].disabled = false;
-
-        var f = form.getElementsByTagName('textarea');
-        for (var i = 0; i < f.length; i++)
-            f[i].disabled = false;
-    }
-
-    constructor() {
-        let toastArea = document.getElementById('toast-area');
-
-        toastArea.style.visibility = 'hidden';
-
-        let form = document.getElementById('form');
-
-        let processForm = (e) => {
-            if (e.preventDefault) e.preventDefault();
-
-            toastArea.style.visibility = 'visible';
-
-            let message = 'Без темы';
-            let subject = document.getElementById('subject');
-
-            if (subject.value == 'Singolo') {
-                message = 'Тема: Singolo';
-            } else if (subject.value.length > 0) {
-                message = `\nТема: ${subject.value}`;
-            }
-
-            let describe = document.getElementById('describe');
-
-            if (describe.value == 'Portfolio project') {
-                message += '\nОписание: Singolo';
-            } else if (describe.value.length > 0) {
-                message += `\nОписание: ${describe.value}`;
-            } else {
-                message += '\nБез описания';
-            }
-
-            toastNotification.push('Письмо отправлено', message, () => {
-                formInterceptor.enableform(form);
-                toastArea.style.visibility = 'hidden';
-            });
-
-            formInterceptor.disableform(form);
-
-            return false;
-        }
-
-        if (form.attachEvent) {
-            form.attachEvent("submit", processForm);
-        } else {
-            form.addEventListener("submit", processForm);
-        }
-
-    }
-}
-
+    [_0x10b2('0x26')](_0x4cdda6) { var _0x12111f = _0x4cdda6[_0x10b2('0x5a')]('input'); for (var _0x357c58 = 0x0; _0x357c58 < _0x12111f[_0x10b2('0x4d')]; _0x357c58++) _0x12111f[_0x357c58][_0x10b2('0x13')] = !![]; var _0x12111f = _0x4cdda6[_0x10b2('0x5a')]('button'); for (var _0x357c58 = 0x0; _0x357c58 < _0x12111f[_0x10b2('0x4d')]; _0x357c58++) _0x12111f[_0x357c58]['disabled'] = !![]; var _0x12111f = _0x4cdda6[_0x10b2('0x5a')](_0x10b2('0xf')); for (var _0x357c58 = 0x0; _0x357c58 < _0x12111f[_0x10b2('0x4d')]; _0x357c58++) _0x12111f[_0x357c58][_0x10b2('0x13')] = !![]; }['enableform'](_0x2a40d2) { var _0x406aea = _0x2a40d2[_0x10b2('0x5a')](_0x10b2('0x30')); for (var _0x34eb56 = 0x0; _0x34eb56 < _0x406aea[_0x10b2('0x4d')]; _0x34eb56++) _0x406aea[_0x34eb56][_0x10b2('0x13')] = ![]; var _0x406aea = _0x2a40d2['getElementsByTagName'](_0x10b2('0x45')); for (var _0x34eb56 = 0x0; _0x34eb56 < _0x406aea['length']; _0x34eb56++) _0x406aea[_0x34eb56][_0x10b2('0x13')] = ![]; var _0x406aea = _0x2a40d2[_0x10b2('0x5a')](_0x10b2('0xf')); for (var _0x34eb56 = 0x0; _0x34eb56 < _0x406aea[_0x10b2('0x4d')]; _0x34eb56++) _0x406aea[_0x34eb56]['disabled'] = ![]; }
+    constructor() { let _0x5d4292 = document['getElementById'](_0x10b2('0x38'));
+        _0x5d4292[_0x10b2('0x59')][_0x10b2('0x11')] = _0x10b2('0x56'); let _0x262583 = document[_0x10b2('0x42')](_0x10b2('0xc')); let _0x1c1a55 = _0x211749 => { if (_0x211749[_0x10b2('0x22')]) _0x211749[_0x10b2('0x22')]();
+            _0x5d4292[_0x10b2('0x59')][_0x10b2('0x11')] = _0x10b2('0x39'); let _0x1bb7c3 = _0x10b2('0x37'); let _0x271e51 = document['getElementById'](_0x10b2('0x21')); if (_0x271e51['value'] == _0x10b2('0x4f')) { _0x1bb7c3 = _0x10b2('0x1d'); } else if (_0x271e51[_0x10b2('0x51')]['length'] > 0x0) { _0x1bb7c3 = _0x10b2('0x4a') + _0x271e51[_0x10b2('0x51')]; } let _0xaeb21 = document['getElementById'](_0x10b2('0x28')); if (_0xaeb21[_0x10b2('0x51')] == _0x10b2('0x34')) { _0x1bb7c3 += _0x10b2('0x3'); } else if (_0xaeb21[_0x10b2('0x51')][_0x10b2('0x4d')] > 0x0) { _0x1bb7c3 += _0x10b2('0x35') + _0xaeb21[_0x10b2('0x51')]; } else { _0x1bb7c3 += _0x10b2('0x23'); }
+            toastNotification[_0x10b2('0x6')](_0x10b2('0x3c'), _0x1bb7c3, () => { formInterceptor[_0x10b2('0x5')](_0x262583);
+                _0x5d4292[_0x10b2('0x59')][_0x10b2('0x11')] = _0x10b2('0x56'); });
+            formInterceptor[_0x10b2('0x26')](_0x262583); return ![]; }; if (_0x262583[_0x10b2('0x43')]) { _0x262583[_0x10b2('0x43')]('submit', _0x1c1a55); } else { _0x262583['addEventListener'](_0x10b2('0x24'), _0x1c1a55); } } }
 let pageNavigator = new PageNavigator();
 let slider = new Slider();
 let phoneDisplay = new PhoneDisplay();
