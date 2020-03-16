@@ -1,51 +1,315 @@
-const _0x27e6 = ['smooth', '\x0aБез\x20описания', 'src', 'forEach', '_portfolioTags', 'className', 'toast-area', 'IMG', 'describe', '.jpg', 'tagName', 'add', 'hidden', '_initialize', 'onscroll', '_showNextElement', 'ABOUT', 'Portfolio\x20project', 'clientHeight', 'addEventListener', 'iphone2-display', 'classList', 'childNodes', 'assets/img/portfolio-', '\x0aОписание:\x20Singolo', '_showPrevElement', '_sections', 'push', 'slider__controls__arrow\x20right', 'slider__controls__arrow\x20left', 'iphone-center-display', 'Singolo', 'Без\x20темы', 'abs', 'pageNavigator', 'iphone-horizon-display', 'floor', 'find', 'preventDefault', 'from', 'portfolio_tags', 'iphone1-display', 'Письмо\x20отправлено', 'items', 'onclick', 'textarea', 'getBoundingClientRect', 'visibility', 'current', 'getElementById', 'getElementsByTagName', 'enableform', '\x0aТема:\x20', 'innerText', 'value', 'Тема:\x20Singolo', 'iphone-vert-display', 'header__menu__item', 'slider__content', 'HOME', 'disableform', 'offsetTop', '_show', 'PORTFOLIO', 'slice', 'filter', 'length', 'remove', 'style', '_shuffle', 'portfolio_images', 'button', 'attachEvent', 'visible', 'SERVICES', 'disabled', '_hide', 'submit', '_switchDisplay', 'scroll', 'enabled', 'input', 'selected'];
-(function(_0x55eff4, _0x27e6ac) { const _0x48a6ae = function(_0x562eb8) { while (--_0x562eb8) { _0x55eff4['push'](_0x55eff4['shift']()); } };
-    _0x48a6ae(++_0x27e6ac); }(_0x27e6, 0x7a));
-const _0x48a6 = function(_0x55eff4, _0x27e6ac) { _0x55eff4 = _0x55eff4 - 0x0; let _0x48a6ae = _0x27e6[_0x55eff4]; return _0x48a6ae; };
-class PageNavigator { constructor() { this['_initialize'](); let _0x27ecae = document[_0x48a6('0xa')](_0x48a6('0x4e')); let _0x110e66 = Array[_0x48a6('0x0')](_0x27ecae[_0x48a6('0x42')])[_0x48a6('0x1a')](_0x45c8c4 => _0x45c8c4[_0x48a6('0x31')] == _0x48a6('0x12'));
-        _0x110e66[0x0][_0x48a6('0x41')]['add'](_0x48a6('0x2b'));
-        _0x110e66['forEach'](_0x1f3f96 => { _0x1f3f96[_0x48a6('0x5')] = () => { let _0x458de0 = this[_0x48a6('0x46')][_0x48a6('0x51')](_0x5f2b21 => { if (_0x5f2b21['id'] == _0x1f3f96[_0x48a6('0xe')]) { _0x110e66['forEach'](_0x61c015 => { if (_0x61c015['innerText'] != _0x1f3f96[_0x48a6('0xe')]) { _0x61c015[_0x48a6('0x41')][_0x48a6('0x1c')](_0x48a6('0x2b')); } });
-                        _0x1f3f96[_0x48a6('0x41')][_0x48a6('0x37')]('selected'); return _0x5f2b21; } });
-                window[_0x48a6('0x28')]({ 'top': _0x458de0[_0x48a6('0x16')] - _0x27ecae[_0x48a6('0x3e')], 'behavior': _0x48a6('0x2c') }); }; });
-        window[_0x48a6('0x3a')] = () => { _0x110e66[_0x48a6('0x2f')](_0x394734 => { let _0x3ae5b4 = this[_0x48a6('0x46')][_0x48a6('0x51')](_0x3ba5ab => { if (_0x3ba5ab['id'] == _0x394734[_0x48a6('0xe')]) { return _0x3ba5ab; } }); let _0x1ce4c7 = Math[_0x48a6('0x50')](_0x3ae5b4[_0x48a6('0x7')]()['y']); if (_0x1ce4c7 > 0x3f && _0x1ce4c7 < 0xdc || _0x1ce4c7 == 0x0) { _0x394734[_0x48a6('0x41')][_0x48a6('0x37')](_0x48a6('0x2b'));
-                    _0x110e66[_0x48a6('0x2f')](_0x582fc0 => { if (_0x582fc0[_0x48a6('0xe')] != _0x394734[_0x48a6('0xe')]) { _0x582fc0['classList'][_0x48a6('0x1c')](_0x48a6('0x2b')); } }); } }); }; }[_0x48a6('0x39')]() { this[_0x48a6('0x46')] = [document['getElementById'](_0x48a6('0x14')), document[_0x48a6('0xa')](_0x48a6('0x23')), document[_0x48a6('0xa')](_0x48a6('0x18')), document[_0x48a6('0xa')](_0x48a6('0x3c')), document[_0x48a6('0xa')]('CONTACT')]; } }
-class Slider { constructor() { let _0x3fead5 = document['getElementById']('slider');
-        [..._0x3fead5['childNodes']][_0x48a6('0x51')](_0x1f4e8c => { if (_0x1f4e8c[_0x48a6('0x31')] == _0x48a6('0x49')) return _0x1f4e8c; })[_0x48a6('0x5')] = () => { this[_0x48a6('0x45')](); };
-        [..._0x3fead5[_0x48a6('0x42')]][_0x48a6('0x51')](_0x174483 => { if (_0x174483[_0x48a6('0x31')] == _0x48a6('0x48')) return _0x174483; })[_0x48a6('0x5')] = () => { this[_0x48a6('0x3b')](); };
-        this['items'] = [..._0x3fead5[_0x48a6('0x42')]][_0x48a6('0x1a')](_0xdb8d98 => { if (_0xdb8d98[_0x48a6('0x31')] == _0x48a6('0x13')) { return _0xdb8d98; } });
-        this[_0x48a6('0x4')][_0x48a6('0x19')](0x1)[_0x48a6('0x2f')](_0x2ce6ae => { this[_0x48a6('0x25')](_0x2ce6ae); });
-        this['current'] = 0x0; }[_0x48a6('0x3b')]() { this[_0x48a6('0x25')](this['items'][Math['abs'](this[_0x48a6('0x9')])]);
-        this[_0x48a6('0x9')] = (this[_0x48a6('0x9')] + 0x1) % this[_0x48a6('0x4')][_0x48a6('0x1b')];
-        this['_show'](this['items'][Math[_0x48a6('0x4d')](this['current'])]); }[_0x48a6('0x45')]() { this[_0x48a6('0x25')](this[_0x48a6('0x4')][Math[_0x48a6('0x4d')](this[_0x48a6('0x9')])]);
-        this[_0x48a6('0x9')] = (this[_0x48a6('0x9')] - 0x1) % this[_0x48a6('0x4')][_0x48a6('0x1b')];
-        this[_0x48a6('0x17')](this[_0x48a6('0x4')][Math[_0x48a6('0x4d')](this[_0x48a6('0x9')])]); }[_0x48a6('0x25')](_0x1edcf1) { _0x1edcf1[_0x48a6('0x41')][_0x48a6('0x37')](_0x48a6('0x38'));
-        _0x1edcf1[_0x48a6('0x1d')][_0x48a6('0x8')] = 'hidden'; }[_0x48a6('0x17')](_0x7b1695) { _0x7b1695['classList'][_0x48a6('0x1c')](_0x48a6('0x38'));
-        _0x7b1695['classList'][_0x48a6('0x37')](_0x48a6('0x22'));
-        _0x7b1695['style'][_0x48a6('0x8')] = _0x48a6('0x22'); } }
-class PhoneDisplay { constructor() { let _0x35de0b = [_0x48a6('0x11'), _0x48a6('0x4f'), _0x48a6('0x2'), _0x48a6('0x4a'), _0x48a6('0x40')];
-        _0x35de0b[_0x48a6('0x2f')](_0x146b23 => { let _0x50b94c = document[_0x48a6('0xa')](_0x146b23);
-            _0x50b94c[_0x48a6('0x5')] = () => { this['_switchDisplay'](_0x50b94c); };
-            _0x50b94c[_0x48a6('0x5')] = () => { this[_0x48a6('0x27')](_0x50b94c); }; }); }[_0x48a6('0x27')](_0x296c94) { if (_0x296c94[_0x48a6('0x29')] == undefined) { _0x296c94[_0x48a6('0x29')] = !![]; } if (_0x296c94[_0x48a6('0x29')]) { _0x296c94[_0x48a6('0x29')] = ![];
-            _0x296c94[_0x48a6('0x41')][_0x48a6('0x37')](_0x48a6('0x24')); } else { _0x296c94[_0x48a6('0x29')] = !![];
-            _0x296c94[_0x48a6('0x41')][_0x48a6('0x1c')]('disabled'); } } }
-class Portfolio { constructor() { this[_0x48a6('0x30')] = [...document[_0x48a6('0xa')](_0x48a6('0x1'))['childNodes']];
-        this[_0x48a6('0x30')][0x1][_0x48a6('0x41')][_0x48a6('0x37')](_0x48a6('0x2b'));
-        this[_0x48a6('0x30')]['forEach']((_0x4a3d8f, _0xd27e55) => { _0x4a3d8f[_0x48a6('0x5')] = () => { _0x4a3d8f[_0x48a6('0x41')][_0x48a6('0x37')](_0x48a6('0x2b'));
-                this[_0x48a6('0x1e')](_0xd27e55);
-                this['_portfolioTags']['forEach'](_0x2cd9d1 => { if (_0x2cd9d1[_0x48a6('0xe')] != _0x4a3d8f[_0x48a6('0xe')] && _0x2cd9d1[_0x48a6('0x41')]) { _0x2cd9d1[_0x48a6('0x41')][_0x48a6('0x1c')](_0x48a6('0x2b')); } }); }; }); let _0x12d892 = [...document[_0x48a6('0xa')](_0x48a6('0x1f'))[_0x48a6('0x42')]][_0x48a6('0x1a')](_0x4822ad => _0x4822ad[_0x48a6('0x36')] == 'IMG');
-        _0x12d892['forEach']((_0x3bda46, _0x60c144) => { _0x3bda46[_0x48a6('0x5')] = () => { _0x3bda46['classList'][_0x48a6('0x37')](_0x48a6('0x2b'));
-                _0x12d892[_0x48a6('0x2f')]((_0x10a6b3, _0x4108ca) => { if (_0x4108ca != _0x60c144 && _0x10a6b3[_0x48a6('0x41')]) { _0x10a6b3[_0x48a6('0x41')][_0x48a6('0x1c')](_0x48a6('0x2b')); } }); }; }); }[_0x48a6('0x1e')](_0x2670fa) { let _0x4295e9 = 0xc; let _0x3c39b3 = [...document[_0x48a6('0xa')](_0x48a6('0x1f'))[_0x48a6('0x42')]];
-        _0x3c39b3[_0x48a6('0x1a')](_0x3aab8b => _0x3aab8b[_0x48a6('0x36')] == _0x48a6('0x33'))[_0x48a6('0x2f')]((_0x33dd40, _0x2af97a) => { let _0x332718 = (_0x2af97a + _0x2670fa) % _0x4295e9;
-            _0x332718 = _0x332718 == 0x0 ? _0x4295e9 : _0x332718;
-            _0x33dd40[_0x48a6('0x2e')] = _0x48a6('0x43') + _0x332718 + _0x48a6('0x35'); }); } }
+class PageNavigator {
+    constructor() {
+        this._initialize();
+
+        let pageNavigator = document.getElementById('pageNavigator');
+
+        let menuItems = Array.from(pageNavigator.childNodes)
+            .filter(p => p.className == 'header__menu__item');
+
+        menuItems[0].classList.add('selected');
+
+        menuItems.forEach(element => {
+
+            element.onclick = () => {
+
+                let section = this._sections.find(p => {
+                    if (p.id == element.innerText) {
+                        menuItems.forEach(p => {
+                            if (p.innerText != element.innerText) {
+                                p.classList.remove('selected');
+                            }
+                        });
+
+                        element.classList.add('selected');
+                        return p;
+                    }
+                });
+
+                window.scroll({
+                    top: section.offsetTop - pageNavigator.clientHeight,
+                    behavior: 'smooth'
+                });
+
+            };
+
+        });
+
+        window.onscroll = () => {
+            menuItems.forEach(item => {
+
+                let section = this._sections.find(p => {
+                    if (p.id == item.innerText) {
+                        return p;
+                    }
+                });
+
+                let offsetTop = Math.floor(section.getBoundingClientRect().y);
+
+                if ((offsetTop > 63 && offsetTop < 220) || offsetTop == 0) {
+
+                    item.classList.add('selected');
+
+                    menuItems.forEach(p => {
+                        if (p.innerText != item.innerText) {
+                            p.classList.remove('selected');
+                        }
+                    });
+                }
+            });
+        };
+
+    }
+    _initialize() {
+        this._sections = [
+            document.getElementById('HOME'),
+            document.getElementById('SERVICES'),
+            document.getElementById('PORTFOLIO'),
+            document.getElementById('ABOUT'),
+            document.getElementById('CONTACT'),
+        ];
+    }
+}
+
+class Slider {
+    constructor() {
+        let slider = document.getElementById('slider');
+
+        [...slider.childNodes]
+        .find(p => {
+            if (p.className == 'slider__controls__arrow left') return p;
+        }).onclick = () => {
+            this._showPrevElement();
+        };
+
+        [...slider.childNodes]
+        .find(p => {
+            if (p.className == 'slider__controls__arrow right') return p;
+        }).onclick = () => {
+            this._showNextElement();
+        };
+
+        this.items = [...slider.childNodes].filter(p => {
+            if (p.className == 'slider__content') {
+                return p;
+            }
+        });
+
+        this.items.slice(1).forEach(element => {
+            element.style.visibility = 'hidden';
+        });
+
+        this.current = 0;
+    }
+
+    _showNextElement() {
+        this._hideForward(this.items[Math.abs(this.current)]);
+        this.current = (this.current + 1) % this.items.length;
+        this._showForward(this.items[Math.abs(this.current)]);
+    }
+
+    _showPrevElement() {
+
+        this._hideBackward(this.items[Math.abs(this.current)]);
+        this.current = (this.current - 1) % this.items.length;
+        this._showBackward(this.items[Math.abs(this.current)]);
+    }
+
+    _hideForward(element) {
+        element.classList.remove('visible-forward');
+        element.classList.remove('visible-backward');
+        element.classList.add('hidden-forward');
+    }
+
+    _showForward(element) {
+        element.style.visibility = 'visible';
+        element.classList.remove('hidden-forward');
+        element.classList.remove('hidden-backward');
+        element.classList.add('visible-forward');
+    }
+
+    _hideBackward(element) {
+        element.classList.remove('visible-backward');
+        element.classList.remove('visible-forward');
+        element.classList.add('hidden-backward');
+    }
+
+    _showBackward(element) {
+        element.style.visibility = 'visible';
+        element.classList.remove('hidden-backward');
+        element.classList.remove('hidden-forward');
+        element.classList.add('visible-backward');
+    }
+
+}
+
+class PhoneDisplay {
+    constructor() {
+        let phoneIds = [
+            'iphone-vert-display',
+            'iphone-horizon-display',
+            'iphone1-display',
+            'iphone-center-display',
+            'iphone2-display',
+        ];
+
+        phoneIds.forEach(p => {
+            let phoneElement = document.getElementById(p);
+
+            phoneElement.onclick = () => {
+                this._switchDisplay(phoneElement);
+            };
+
+            phoneElement.onclick = () => {
+                this._switchDisplay(phoneElement);
+            };
+        });
+    }
+
+    _switchDisplay(display) {
+
+        if (display.enabled == undefined) {
+            display.enabled = true;
+        }
+
+        if (display.enabled) {
+            display.enabled = false;
+            display.classList.add('disabled');
+        } else {
+            display.enabled = true;
+            display.classList.remove('disabled');
+        }
+    }
+}
+
+class Portfolio {
+    constructor() {
+        this._portfolioTags = [...document.getElementById('portfolio_tags').childNodes];
+
+        this._portfolioTags[1].classList.add('selected');
+
+        this._portfolioTags.forEach((element, i) => {
+            element.onclick = () => {
+                element.classList.add("selected");
+                this._shuffle(i);
+                this._portfolioTags.forEach(p => {
+                    if (p.innerText != element.innerText && p.classList) {
+                        p.classList.remove('selected');
+                    }
+                });
+            };
+        });
+
+        let portfolioImages = [...document.getElementById('portfolio_images').childNodes].filter(p => p.tagName == 'IMG');
+
+        portfolioImages.forEach((element, j) => {
+            element.onclick = () => {
+                element.classList.add("selected");
+                portfolioImages.forEach((p, i) => {
+                    if (i != j && p.classList) {
+                        p.classList.remove('selected');
+                    }
+                });
+            };
+        });
+
+    }
+
+    _shuffle(shift) {
+        let length = 12;
+
+        let portfolioImages = [...document.getElementById('portfolio_images').childNodes];
+
+        portfolioImages.filter(p => p.tagName == 'IMG')
+            .forEach((p, i) => {
+                let srcId = (i + shift) % length;
+                srcId = srcId == 0 ? length : srcId;
+                p.src = `assets/img/portfolio-${srcId}.jpg`;
+            });
+
+    }
+}
+
 class FormInterceptor {
-    [_0x48a6('0x15')](_0x35dcde) { var _0x3908c2 = _0x35dcde['getElementsByTagName'](_0x48a6('0x2a')); for (var _0x5d9743 = 0x0; _0x5d9743 < _0x3908c2[_0x48a6('0x1b')]; _0x5d9743++) _0x3908c2[_0x5d9743]['disabled'] = !![]; var _0x3908c2 = _0x35dcde['getElementsByTagName'](_0x48a6('0x20')); for (var _0x5d9743 = 0x0; _0x5d9743 < _0x3908c2[_0x48a6('0x1b')]; _0x5d9743++) _0x3908c2[_0x5d9743][_0x48a6('0x24')] = !![]; var _0x3908c2 = _0x35dcde[_0x48a6('0xb')](_0x48a6('0x6')); for (var _0x5d9743 = 0x0; _0x5d9743 < _0x3908c2[_0x48a6('0x1b')]; _0x5d9743++) _0x3908c2[_0x5d9743][_0x48a6('0x24')] = !![]; }[_0x48a6('0xc')](_0x4b9d9b) { var _0x2169bc = _0x4b9d9b[_0x48a6('0xb')](_0x48a6('0x2a')); for (var _0x57952b = 0x0; _0x57952b < _0x2169bc[_0x48a6('0x1b')]; _0x57952b++) _0x2169bc[_0x57952b][_0x48a6('0x24')] = ![]; var _0x2169bc = _0x4b9d9b[_0x48a6('0xb')]('button'); for (var _0x57952b = 0x0; _0x57952b < _0x2169bc[_0x48a6('0x1b')]; _0x57952b++) _0x2169bc[_0x57952b][_0x48a6('0x24')] = ![]; var _0x2169bc = _0x4b9d9b[_0x48a6('0xb')]('textarea'); for (var _0x57952b = 0x0; _0x57952b < _0x2169bc[_0x48a6('0x1b')]; _0x57952b++) _0x2169bc[_0x57952b]['disabled'] = ![]; }
-    constructor() { let _0x3c4e09 = document[_0x48a6('0xa')](_0x48a6('0x32'));
-        _0x3c4e09[_0x48a6('0x1d')][_0x48a6('0x8')] = _0x48a6('0x38'); let _0x45757e = document[_0x48a6('0xa')]('form'); let _0x1a555c = _0x39bbd1 => { if (_0x39bbd1[_0x48a6('0x52')]) _0x39bbd1[_0x48a6('0x52')]();
-            _0x3c4e09[_0x48a6('0x1d')][_0x48a6('0x8')] = 'visible'; let _0x357048 = _0x48a6('0x4c'); let _0x501f0c = document[_0x48a6('0xa')]('subject'); if (_0x501f0c['value'] == _0x48a6('0x4b')) { _0x357048 = _0x48a6('0x10'); } else if (_0x501f0c[_0x48a6('0xf')]['length'] > 0x0) { _0x357048 = _0x48a6('0xd') + _0x501f0c[_0x48a6('0xf')]; } let _0x37ca03 = document[_0x48a6('0xa')](_0x48a6('0x34')); if (_0x37ca03[_0x48a6('0xf')] == _0x48a6('0x3d')) { _0x357048 += _0x48a6('0x44'); } else if (_0x37ca03[_0x48a6('0xf')]['length'] > 0x0) { _0x357048 += '\x0aОписание:\x20' + _0x37ca03[_0x48a6('0xf')]; } else { _0x357048 += _0x48a6('0x2d'); }
-            toastNotification[_0x48a6('0x47')](_0x48a6('0x3'), _0x357048, () => { formInterceptor[_0x48a6('0xc')](_0x45757e);
-                _0x3c4e09[_0x48a6('0x1d')]['visibility'] = _0x48a6('0x38'); });
-            formInterceptor['disableform'](_0x45757e); return ![]; }; if (_0x45757e[_0x48a6('0x21')]) { _0x45757e['attachEvent'](_0x48a6('0x26'), _0x1a555c); } else { _0x45757e[_0x48a6('0x3f')](_0x48a6('0x26'), _0x1a555c); } } }
+
+    disableform(form) {
+        var f = form.getElementsByTagName('input');
+        for (var i = 0; i < f.length; i++)
+            f[i].disabled = true;
+
+        var f = form.getElementsByTagName('button');
+        for (var i = 0; i < f.length; i++)
+            f[i].disabled = true;
+
+        var f = form.getElementsByTagName('textarea');
+        for (var i = 0; i < f.length; i++)
+            f[i].disabled = true;
+    }
+
+    enableform(form) {
+        var f = form.getElementsByTagName('input');
+        for (var i = 0; i < f.length; i++)
+            f[i].disabled = false;
+
+        var f = form.getElementsByTagName('button');
+        for (var i = 0; i < f.length; i++)
+            f[i].disabled = false;
+
+        var f = form.getElementsByTagName('textarea');
+        for (var i = 0; i < f.length; i++)
+            f[i].disabled = false;
+    }
+
+    constructor() {
+        let toastArea = document.getElementById('toast-area');
+
+        toastArea.style.visibility = 'hidden';
+
+        let form = document.getElementById('form');
+
+        let processForm = (e) => {
+            if (e.preventDefault) e.preventDefault();
+
+            toastArea.style.visibility = 'visible';
+
+            let message = 'Без темы';
+            let subject = document.getElementById('subject');
+
+            if (subject.value == 'Singolo') {
+                message = 'Тема: Singolo';
+            } else if (subject.value.length > 0) {
+                message = `\nТема: ${subject.value}`;
+            }
+
+            let describe = document.getElementById('describe');
+
+            if (describe.value == 'Portfolio project') {
+                message += '\nОписание: Singolo';
+            } else if (describe.value.length > 0) {
+                message += `\nОписание: ${describe.value}`;
+            } else {
+                message += '\nБез описания';
+            }
+
+            toastNotification.push('Письмо отправлено', message, () => {
+                formInterceptor.enableform(form);
+                toastArea.style.visibility = 'hidden';
+            });
+
+            formInterceptor.disableform(form);
+
+            return false;
+        }
+
+        if (form.attachEvent) {
+            form.attachEvent("submit", processForm);
+        } else {
+            form.addEventListener("submit", processForm);
+        }
+
+    }
+}
+
 let pageNavigator = new PageNavigator();
 let slider = new Slider();
 let phoneDisplay = new PhoneDisplay();
