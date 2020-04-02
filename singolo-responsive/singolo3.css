@@ -1,0 +1,305 @@
+body,
+html {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: 'Lato', sans-serif;
+    background-color: #2d303a;
+}
+
+.form {
+    background-color: #f06c64;
+    color: #f0d8d9;
+    min-width: 1020px;
+    padding-top: 39px;
+}
+
+.form__content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 940px;
+    min-width: 940px;
+    min-height: 589px;
+    max-height: 589px;
+}
+
+.form__content h1 {
+    height: 32.5px;
+    font-size: 30px;
+    font-weight: 900;
+    color: #f0d8d9;
+    letter-spacing: -0.2px;
+}
+
+.form__content h3 {
+    padding-top: 1px;
+    font-size: 18px;
+    color: #f0d8d9;
+    font-weight: 100;
+    height: 60px;
+    text-align: justify;
+    line-height: 1.71;
+}
+
+.form__content-wrapper {
+    padding-top: 26px;
+    display: flex;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: row;
+}
+
+input,
+textarea {
+    color: #f48c8f;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    border-radius: 5px;
+    background-color: #d6564f;
+    border: none;
+    margin-bottom: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+input {
+    width: 619px;
+}
+
+textarea {
+    width: 619px;
+    height: 202px;
+    resize: none;
+}
+
+::placeholder {
+    color: #f48c8f;
+    opacity: 1;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.05px;
+}
+
+textarea::placeholder {
+    letter-spacing: 0;
+}
+
+
+/* button {
+    width: 100px;
+    background-color: #d6564f;
+    color: #f0d8d9;
+    cursor: pointer;
+} */
+
+
+/* form button:hover {
+    padding: 13px 15px 11px;
+    background-color: #f0d8d9;
+    color: #2d303a;
+    border: none;
+} */
+
+.form__content__contacts {
+    margin-left: -70px;
+    /* overflow: hidden; */
+    max-height: 415px;
+    min-height: 415px;
+}
+
+.buttons {
+    height: 30px;
+    width: 100px;
+}
+
+.buttons button {
+    width: 100px;
+    height: 30px;
+    background-color: #d6564f;
+    color: #f0d8d9;
+    cursor: pointer;
+    border: 0px;
+    border-radius: 5px;
+}
+
+.buttons button:hover {
+    background-color: #f0d8d9;
+    color: #2d303a;
+}
+
+.form__content__contacts__caption {
+    padding: 0;
+    font-size: 19px;
+    color: #f0d8d9;
+    font-weight: 700;
+    height: 18px;
+    margin-top: -3px;
+    letter-spacing: -0.4px;
+    margin-left: -1px;
+}
+
+.form__content__contacts__text {
+    margin-top: 13px;
+    min-height: 89px;
+    max-height: 89px;
+    font-family: 'Lato';
+    /* padding-top: 12px; */
+    font-size: 12px;
+    line-height: 22px;
+    color: #f0d8d9;
+    font-weight: 400;
+    letter-spacing: -0.05px;
+    text-align: justify;
+    margin-left: -1px;
+}
+
+.form__content__contacts__btns {
+    margin-top: -1px;
+}
+
+.form__content__contacts__btns__btn:first-child a {
+    letter-spacing: 0.5px;
+    margin-left: 1px;
+}
+
+.form__content__contacts__btns__btn:not(:first-child) a {
+    padding-top: 3px;
+    letter-spacing: 0.5px;
+}
+
+.form__content__contacts__btns__btn:nth-of-type(3) a {
+    padding-top: 4px;
+    letter-spacing: 0.49px;
+}
+
+.form__content__contacts__btns__btn {
+    display: flex;
+    margin-top: 5px;
+    /* font-size: 11px;
+    color: #f0d8d9;
+    font-weight: 400;
+    line-height: 1.79;
+    
+    justify-content: start;
+    align-items: center;
+    justify-items: center; */
+}
+
+.form__content__contacts__btns__btn__icon {
+    min-height: 12px;
+    width: 20px;
+}
+
+.form__content__contacts__btns__btn__icon.location {
+    margin-top: 1px;
+    margin-left: 2.5px;
+    width: 16px;
+    background-image: url(assets/icons/form-icon-location.svg);
+    background-repeat: no-repeat;
+}
+
+.form__content__contacts__btns__btn__icon.phone {
+    margin-top: 4px;
+    margin-left: 0.3px;
+    width: 19px;
+    background-image: url(assets/icons/form-icon-phone.svg);
+    background-repeat: no-repeat;
+}
+
+.form__content__contacts__btns__btn__icon.email {
+    padding-top: 5px;
+    margin-left: -0.5px;
+    background-position-y: bottom;
+    background-image: url(assets/icons/form-icon-mail.svg);
+    background-repeat: no-repeat;
+}
+
+.form__content__contacts__btns__btn a {
+    text-decoration: none;
+    color: #f0d8d9;
+    letter-spacing: 0.4px;
+    padding-left: 3px;
+    font-size: 11px;
+    color: #f0d8d9;
+    font-weight: 400;
+}
+
+footer {
+    background-color: #2d303a;
+    min-width: 1020px;
+    min-height: 100%;
+}
+
+.footer__content {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    min-width: 940px;
+    max-width: 940px;
+    min-height: 76px;
+}
+
+.footer__content__copyright {
+    padding-top: 30px;
+    font-size: 12px;
+    color: #626984;
+    text-align: justify;
+    font-weight: 400;
+}
+
+.footer__content__details__detail__buttons {
+    padding-right: 2px;
+    padding-top: 22px;
+    min-width: 150px;
+    max-width: 150px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Lato';
+}
+
+.footer__content__details__detail__buttons.last {
+    padding-left: 0px;
+}
+
+.footer__content__details__detail__buttons__button {
+    border-radius: 50%;
+    border: 1px solid #767e9e;
+    cursor: pointer;
+    max-height: 32px;
+    min-height: 32px;
+    max-width: 32px;
+    min-width: 32px;
+    margin-right: -2px;
+    box-sizing: border-box;
+}
+
+.footer__content__details__detail__buttons__button:hover {
+    background-color: white;
+}
+
+.footer__content__details__detail__buttons__button.facebook {
+    background-image: url(assets/img/facebook.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer__content__details__detail__buttons__button.google {
+    background-image: url(assets/img/google.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer__content__details__detail__buttons__button.twitter {
+    background-image: url(assets/img/twitter.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer__content__details__detail__buttons__button.linkedin {
+    background-image: url(assets/img/linkedin.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
